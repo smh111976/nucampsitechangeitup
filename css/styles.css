@@ -17,8 +17,93 @@ header h2 {
 }
 
 .site-footer {
-  background-image: linear-gradient(#cec8ff, white);
+  border-top: 8px solid #222;
+  background-image: url(../img/header-footer-bg.jpg);
   padding: 20px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.site-footer > .container {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.25rem;
+  padding: 1rem 15px;
+}
+.col--footer-links h5 {
+  color: #ccc;
+}
+.col--footer-links a {
+  color: white;
+}
+.col--footer-links a:hover {
+  color: white;
+}
+header.jumbotron {
+  height: 165px;
+  background-image: url(../img/header-footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header.jumbotron h1,
+header.jumbotron h2 {
+  text-shadow: 2px 2px 4px #000000;
+}
+header.jumbotron.home-header-jumbotron {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-image: none;
+  background-color: transparent;
+}
+
+.home-header-jumbotron [data-target='#loginModal'] {
+  text-shadow: 2px 2px 4px #000000;
+  padding: 0 1rem;
+}
+nav.navbar-main {
+  top: -1px;
+  height: 60px;
+}
+.navbar-main--home.navbar-dark {
+  margin-top: 225px;
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+}
+.scroll-down .navbar-main--home.navbar-dark {
+  background-color: #901cad;
+  background-color: #222;
+}
+.navbar-main--home .navbar-collapse {
+  flex-grow: 0;
+}
+.navbar-main--home .nav-item {
+  background-color: rgba(34, 34, 34, 0.95);
+  border-radius: 0.25rem;
+  margin: 0 0.5rem;
+  transition: background-color 0.3s ease;
+}
+.scroll-down .navbar-main--home .nav-item {
+  background-color: #901cad;
+  background-color: #222;
+}
+.navbar-expand-sm.navbar-main--home .nav-link {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  text-shadow: 2px 2px 4px #000000;
+  transition: text-shadow 0.3s ease;
+}
+.scroll-down .navbar-expand-sm.navbar-main--home .nav-link {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
+}
+.navbar-main--home .nav-item:last-child {
+  margin-right: 0;
+}
+.navbar-main--home .navbar-brand {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.scroll-down .navbar-main--home .navbar-brand {
+  opacity: 1;
 }
 
 .jumbotron {
@@ -27,14 +112,36 @@ header h2 {
   color: white;
   margin: 0;
 }
+.home-hero-img-bg {
+  height: 100vh;
+  transition: background-position 0.1s ease-in;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 90%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url(../img/campers.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: -285px;
+}
 
 .row-content {
   padding: 50px 0;
   border-bottom: 1px ridge;
   min-height: 200px;
 }
+.container.home-reserve-site {
+  padding-top: 350px;
+}
+.card.home-reserve-site {
+  background-color: rgba(255, 255, 255, 0.85);
+}
 .navbar-dark {
   background-color: #901cad;
+  background-color: #222;
 }
 .tab-content {
   border: 1px solid #ddd;
@@ -52,4 +159,46 @@ a:hover {
 
 .carousel {
   border: solid #5637dd;
+}
+
+@media (max-width: 575px) {
+  header.jumbotron.home-header-jumbotron {
+    height: 250px;
+  }
+  .navbar-main--home.navbar-dark {
+    padding-left: 30px;
+    padding-right: 30px;
+    /* margin-top: 250px; */
+  }
+
+  .home-hero-img-bg {
+    background-position: 0 0;
+  }
+  .navbar-dark .navbar-toggler {
+    color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .navbar-nav {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  .scroll-down .navbar-nav {
+    background-color: #901cad;
+  }
+}
+@media (min-width: 576px) {
+  .navbar-main--home.navbar-dark {
+    margin-top: 200px;
+  }
+  .home-hero-img-bg {
+    margin-top: -260px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-main--home.navbar-dark {
+    margin-top: 165px;
+  }
+  .home-hero-img-bg {
+    margin-top: -225px;
+  }
 }
